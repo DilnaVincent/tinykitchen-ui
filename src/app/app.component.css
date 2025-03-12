@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .brand-name {
+    position: absolute;
+    top: 20px; /* Adjust distance from top */
+    left: 20px; /* Adjust distance from left */
+  }
+  
+  .brand-logo {
+    width: 50px;  /* Set a specific width */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Makes it look like a button */
+  }
+
+  h1 {
+    text-align: center;       /* Centers the text */
+    font-size: 3rem;              /* Font size */
+  color: black;             /* Royal blue color */
+  font-weight: bold;            /* Bold font */
+  font-family: 'Allura', cursive; /* Apply Allura cursive font */
+  white-space: nowrap;          /* Ensure the text stays on one line */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for the text */
+  }
