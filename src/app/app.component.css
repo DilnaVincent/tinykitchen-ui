@@ -11,15 +11,18 @@ html, body {
   }
   
   .brand-name {
-    position: absolute;
-    top: 20px; /* Adjust distance from top */
-    left: 20px; /* Adjust distance from left */
+    display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  margin-top: 10px;
   }
   
   .brand-logo {
-    width: 50px;  /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer; /* Makes it look like a button */
+    width: 40px;
+  height: auto;
+  cursor: pointer;
+  z-index: 5;
   }
 
   h1 {
@@ -31,3 +34,82 @@ html, body {
   white-space: nowrap;          /* Ensure the text stays on one line */
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for the text */
   }
+
+  .header-container {
+    display: flex;  /* Added Flexbox */
+    align-items: center;
+    justify-content: space-between; /* Pushes title left, search right */
+    padding: 10px 20px;
+    background-color: hwb(192 62% 17%); /*  Optional: Background */
+    position: relative; /*  Ensures heading stays on top */
+  z-index: 10; /* 
+  }
+  
+  .title {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 10px; /* Space between input and button */
+  }
+
+  .search-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-form button {
+    padding: 8px 12px;
+    background-color: #007bff; /* Styled button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /*  Brand name container - Centers icons */
+  .brand-name {
+    display: flex;  /*  Aligns icons in a row */
+    align-items: center;
+    gap: 15px; /*  Adds spacing between icons */
+    padding: 10px;
+  }
+  
+  /*  Logo styling */
+  .brand-logo {
+    width: 40px; /*  Adjusted size */
+    height: auto;
+    cursor: pointer;
+  }
+
+  p-menu {
+    position: absolute;
+    top: 100%; /* Places the menu below the button */
+    left: 0;
+    z-index: 1000; /* Ensures it stays above other elements */
+  }
+  
+  /* Make sure to use ::ng-deep for deep targeting */
+::ng-deep .p-menu {
+  background-color: #2f6da6 !important; /* Set background color */
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(26, 113, 148, 0.956); /* Optional: add shadow */
+}
+
+::ng-deep .p-menu .p-menuitem {
+  background-color: #333 !important; /* Ensure background color applies to items */
+}
+
+::ng-deep .p-menu .p-menuitem-link {
+  color: white !important; /* Text color for links */
+  font-weight: bold;
+}
+
+
+::ng-deep .p-menu .p-menu-separator {
+  border-top: 1px solid #777 !important; /* Style for separators */
+  margin: 5px 0;
+}

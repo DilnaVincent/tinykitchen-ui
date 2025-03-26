@@ -1,9 +1,23 @@
-<h1>TINY KITCHEN</h1>
-<main>
-  <header class="brand-name">
+
+<section class="header-container">
+  <div class="brand-name">
+    <p-menu #menu [model]="menuItems" [popup]="true" appendTo="body"></p-menu>
+    <button pButton type="button" (click)="menu.toggle($event)" #toggleBtn>
+      <img class="brand-logo" src="assets/hamburger.svg" alt="Menu">
+    </button>
     <img class="brand-logo" src="/assets/homelogo.svg" alt="homelogo" aria-hidden="true">
-  </header>
-  <section class="content">
+
+      
+  </div>
+  <h1 class="title">TINY KITCHEN</h1>
+  <form class="search-form">
+    <input type="text" placeholder="Search for Recipe">
+    <button class="primary" type="button">Search</button>
+  </form>
+</section>
+<main>
+    <section class="content">
+      <router-outlet></router-outlet>
     <app-home></app-home>
   </section>
 </main>
